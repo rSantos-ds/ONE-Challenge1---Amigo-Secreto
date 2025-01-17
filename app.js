@@ -28,3 +28,17 @@ function atualizarLista() {
     lista.appendChild(li);
   }
 }
+
+// Função para sortear um amigo
+function sortearAmigo() {
+  if (listaNomes.length > 0) {
+    let numero = Math.floor(Math.random() * listaNomes.length);
+    let nomeSorteado = listaNomes[numero];
+    let resultado = document.querySelector("#resultado");
+    console.log(nomeSorteado);
+
+    resultado.innerHTML = nomeSorteado;
+  } else {
+    alert("Insira nomes na lista para sortear!");
+  }
+}
