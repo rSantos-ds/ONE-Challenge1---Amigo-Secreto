@@ -5,6 +5,8 @@ Challenge 1 do ONE
 Proposta: 
     Criar a lógica para sorteio de nomes para a brincadeira "Amigo Secreto", template da página foi disponibilizado, sendo de responsabilidade do aluno a criação do código e opcionalmente costumização do layout conforme foi realizado
 
+    link do deploy no github: https://rsantos-ds.github.io/ONE-Challenge1---Amigo-Secreto/
+
 # Funcionalidades
 Funcionalidades solicitadas:
     1 - Acrescentar nomes a uma lista, realizando a validação de campo em branco
