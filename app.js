@@ -14,17 +14,26 @@ function adicionarAmigo() {
   } else {
     listaNomes.push(nome);
     campoNome.value = "";
+    campoNome.ariaPlaceholder = "Digite um nome";
     atualizarLista();
   }
 }
 
 // Função para atualizar a lista de nomes na tela
 function atualizarLista() {
+  let aviso = document.querySelector("#mensagem-deletar");
+  if (listaNomes.length > 0) {
+    aviso.innerHTML = "Clique sobre o nome para remover da lista";
+  } else {
+    aviso.innerHTML = "";
+  }
+
   let lista = document.querySelector("#listaAmigos");
   lista.innerHTML = "";
   for (var i = 0; i < listaNomes.length; i++) {
     let li = document.createElement("li");
     li.innerHTML = listaNomes[i];
+    li.setAttribute("onclick", "deletarAmigo(this)");
     lista.appendChild(li);
   }
 }
@@ -37,8 +46,15 @@ function sortearAmigo() {
     let resultado = document.querySelector("#resultado");
     console.log(nomeSorteado);
 
-    resultado.innerHTML = nomeSorteado;
+    resultado.innerHTML = "Amigo sorteado: " + nomeSorteado;
   } else {
     alert("Insira nomes na lista para sortear!");
   }
+}
+
+// Função deletar amigo da lista
+function deletarAmigo(nomeAmigo) {
+  let posicao = listaNomes.indexOf(nomeAmigo.innerHTML);
+  listaNomes.splice(posicao, 1);
+  atualizarLista();
 }

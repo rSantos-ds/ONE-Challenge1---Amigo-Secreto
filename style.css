@@ -1,11 +1,11 @@
 :root {
-    --color-primary: #4B69FD;
-    --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
-    --color-button: #fe652b;
-    --color-button-hover: #e55720;
-    --color-text: #444444;
-    --color-white: #FFFFFF;
+    --color-primary: #279AF1;
+    --color-secondary: #F7F7FF;
+    --color-button: #60656F;
+    --color-border: #60656F;
+    --color-button-hover: #FF4A1C;
+    --color-text: #131112;
+    --color-back: #F7F7FF;
 }
 
 /* Estilos gerais */
@@ -43,13 +43,32 @@ body {
 .input-section {
     flex: 60%;
     background-color: var(--color-secondary);
-    border: 1px solid #000;
-    border-radius: 64px 64px 0 0;
+    border-radius: 0 0 0 0;
     display: flex;
+    /* border-radius: 40px 40px 0 0; */
+    box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.144);
     flex-direction: column;
     align-items: center;
     padding: 20px;
     width: 100%;
+}
+
+
+.header-banner h2 {
+    padding-left: 50px;
+    padding-top: 20px;
+    color: #131112;
+    font-style: italic;
+    font-weight: 600;
+}
+
+
+#simbolo-feliz {
+    color: #F7F7FF;
+    padding-left: 160px;
+    font-weight: 600;
+    font-size: 42px;
+    rotate: 90deg;
 }
 
 /* Títulos */
@@ -58,14 +77,14 @@ body {
     font-family: "Merriweather", serif;
     font-weight: 900;
     font-style: italic;
-    color: var(--color-white);
+    color: var(--color-back);
 }
 
 .section-title {
     font-family: "Inter", serif;
     font-size: 36px;
     font-weight: 700;
-    color: var(--color-primary);
+    color: var(--color-text);
     margin: 10px 0;
     text-align: center;
 }
@@ -82,8 +101,8 @@ body {
 .input-name {
     width: 100%;
     padding: 10px;
-    border: 2px solid #000;
-    border-radius: 25px 0 0 25px;
+    border: 2px solid var(--color-border);
+    border-radius: 10px 0 0 10px;
     font-size: 16px;
 }
 
@@ -97,7 +116,7 @@ body {
     flex: 1;
     padding: 10px 15px;
     font-size: 16px;
-    border: 2px solid #333;
+    border: 1px solid;
     border-right: none;
     border-radius: 25px 0 0 25px;
     font-family: "Merriweather", serif;
@@ -109,21 +128,29 @@ button {
     padding: 15px 30px;
     font-family: "Inter", sans-serif;
     font-size: 16px;
-    border: 2px solid #000;
-    border-radius: 25px;
+    border: 2px solid var(--color-border);
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }
 
 .button-add {
-    background-color: var(--color-tertiary);
-    color: var(--color-text);
-    border-radius: 0 25px 25px 0;
+    background-color: var(--color-button);
+    color: var(--color-back);
+    border-radius: 0 10px 10px 0;
 }
 
 .button-add:hover {
-    background-color: #a1a1a1;
+    background-color: var(--color-button-hover);
+    border: 2px solid var(--color-button-hover);
 }
+
+#mensagem-deletar {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #FF4A1C;
+}
+
 
 /* Listas */
 ul {
@@ -132,11 +159,33 @@ ul {
     font-family: "Inter", sans-serif;
     font-size: 18px;
     margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#listaAmigos {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 10px;
+    column-gap: 40px;
+    text-align: center;
+}
+
+
+li {
+    margin: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+li:hover {
+    color: #FF4A1C;
 }
 
 .result-list {
     margin-top: 15px;
-    color: #05DF05;
+    color: #05913f;
     font-size: 22px;
     font-weight: bold;
     text-align: center;
@@ -148,7 +197,8 @@ ul {
     align-items: center;
     width: 100%;
     padding: 10px 40px;
-    color: var(--color-white);
+    color: var(--color-back);
+    border: #60656F;
     background-color: var(--color-button);
     font-size: 16px;
 }
