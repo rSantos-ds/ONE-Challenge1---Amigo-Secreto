@@ -28,6 +28,8 @@ function atualizarLista() {
     aviso.innerHTML = "";
   }
 
+  listaNomes = listaNomes.sort();
+
   let lista = document.querySelector("#listaAmigos");
   lista.innerHTML = "";
   for (var i = 0; i < listaNomes.length; i++) {
@@ -38,15 +40,33 @@ function atualizarLista() {
   }
 }
 
+//Função para fazer suspense ao sortear
+function suspense() {
+  let resultado = document.querySelector("#resultado");
+  setTimeout(() => {
+    resultado.innerHTML = "Sorteando .";
+  }, 200);
+
+  setTimeout(() => {
+    resultado.innerHTML = "Sorteando ..";
+  }, 400);
+
+  setTimeout(() => {
+    resultado.innerHTML = "Sorteando ...";
+  }, 600);
+}
+
 // Função para sortear um amigo
 function sortearAmigo() {
   if (listaNomes.length > 0) {
+    suspense();
     let numero = Math.floor(Math.random() * listaNomes.length);
     let nomeSorteado = listaNomes[numero];
     let resultado = document.querySelector("#resultado");
-    console.log(nomeSorteado);
 
-    resultado.innerHTML = "Amigo sorteado: " + nomeSorteado;
+    setTimeout(() => {
+      resultado.innerHTML = "Amigo sorteado: " + nomeSorteado;
+    }, 1000);
   } else {
     alert("Insira nomes na lista para sortear!");
   }
