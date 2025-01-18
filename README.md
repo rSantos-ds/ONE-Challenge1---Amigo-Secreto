@@ -18,10 +18,6 @@ Funcionalidades extras implementadas:
 
 ![image](https://github.com/user-attachments/assets/2c3a76b7-fb87-4513-a1fe-c309aaa4f970)
 
-![image](https://github.com/user-attachments/assets/949a5738-235a-4a8d-ac8d-f7a69e487cfc)
-
-![image](https://github.com/user-attachments/assets/1fcd09c6-060f-43f5-84d8-9416b1725a19)
-
 
 # Técnologias utilizadas
   - HTML5
