@@ -3,7 +3,7 @@
 #Descrição do Projeto
 Challenge 1 do ONE
 Proposta: 
-    Criar a lógica para sorteio de nomes para a brincadeira "Amigo Secreto"
+    Criar a lógica para sorteio de nomes para a brincadeira "Amigo Secreto", template da página foi disponibilizado, sendo de responsabilidade do aluno a criação do código e opcionalmente costumização do layout conforme foi realizado
 
 # Funcionalidades
 Funcionalidades solicitadas:
