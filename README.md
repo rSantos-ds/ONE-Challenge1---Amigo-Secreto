@@ -5,7 +5,7 @@ Challenge 1 do ONE
 Proposta: 
     Criar a lógica para sorteio de nomes para a brincadeira "Amigo Secreto"
 
-#Funcionalidades
+# Funcionalidades
 Funcionalidades solicitadas:
     1 - Acrescentar nomes a uma lista, realizando a validação de campo em branco
     2 - Apresentar lista de nomes na tela
@@ -23,7 +23,7 @@ Funcionalidades extras implementadas:
 ![image](https://github.com/user-attachments/assets/1fcd09c6-060f-43f5-84d8-9416b1725a19)
 
 
-#Técnologias utilizadas
+# Técnologias utilizadas
   - HTML5
   - CSS3
   - Javascript
